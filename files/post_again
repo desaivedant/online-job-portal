@@ -1,0 +1,3755 @@
+{
+	"info": {
+		"_postman_id": "89e4e42e-bc32-4464-804a-9a384516b797",
+		"name": "CBPRO APIs v1.0.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7af8ff4-4d8b-4963-9572-78ca65ec9127",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if(jsonData.access_key !== undefined)",
+									"postman.setEnvironmentVariable(\"cbhcm_api_token\", jsonData.access_key);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6Ik9oRlBVYWlTbDRqN3ltR2JHK0ZTWVpGTDJEWXpaeEFQRjUxRzR5N2UwbGs9In0.eyJpc3MiOiJodHRwczpcL1wvZGV2LnRlY2h0ZXhhcy5uZXRcL2NicHJvXC8iLCJhdWQiOiJodHRwczpcL1wvZGV2LnRlY2h0ZXhhcy5uZXRcL2NicHJvXC9DQkUxMjM0NVwvIiwianRpIjoiT2hGUFVhaVNsNGo3eW1HYkcrRlNZWkZMMkRZelp4QVBGNTFHNHk3ZTBsaz0iLCJpYXQiOjE1NjgwOTI3NDUsIm5iZiI6MTU2ODA5Mjc0NSwiZXhwIjoxNTY4MDk2MzQ1LCJkYXRhIjp7InVzZXJJZCI6IjUiLCJ0b2tlbklkIjozMzR9fQ.qAv5uicxoB05qiswJJOFySH19RPN3bEiu-Mf1axEfKs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "User name",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"description": "Password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{cbhcm_api_url}}/employees/login",
+							"host": [
+								"{{cbhcm_api_url}}"
+							],
+							"path": [
+								"employees",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "echo_result",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dev.techtexas.net/cbhcm/CBE12345/api/echo",
+									"protocol": "https",
+									"host": [
+										"dev",
+										"techtexas",
+										"net"
+									],
+									"path": [
+										"cbhcm",
+										"CBE12345",
+										"api",
+										"echo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2019 03:18:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "TECHTEXASSESSID=bvu6njmqo0g306tptd93njhnn7; path=/; secure; HttpOnly"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "Echo 716874248"
+						}
+					]
+				},
+				{
+					"name": "employees/me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{cbhcm_api_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{cbhcm_api_url}}/employees/me",
+							"host": [
+								"{{cbhcm_api_url}}"
+							],
+							"path": [
+								"employees",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personal Information",
+			"item": [
+				{
+					"name": "qualifications",
+					"item": [
+						{
+							"name": "Skill",
+							"item": [
+								{
+									"name": "skill",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n            \"id\": \"599\",\r\n            \"lang_id\": \"1\",\r\n            \"list_id\": \"44\",\r\n            \"type\": \"E\",\r\n            \"list_type\": \"Skill\",\r\n            \"sortorder\": null,\r\n            \"name\": \"Programming and Application Development\",\r\n            \"notes\": \"Programming and Application Development\",\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"5\",\r\n            \"modified_by\": \"5\",\r\n            \"created_on\": \"2019-08-27 18:19:08\",\r\n            \"modified_on\": \"2019-08-27 18:19:08\"\r\n        }"
+										},
+										"url": {
+											"raw": "{{cbhcm_api_url}}/skill",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"skill"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "skill",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/skill",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"skill"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "skill",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/skill",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"skill"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Education",
+							"item": [
+								{
+									"name": "education",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/education",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"education"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "education",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n            \"id\": \"898\",\r\n            \"lang_id\": null,\r\n            \"list_id\": \"45\",\r\n            \"type\": \"E\",\r\n            \"list_type\": \"Education\",\r\n            \"sortorder\": null,\r\n            \"name\": \"Unspecified\",\r\n            \"notes\": \"Home-schooled or educated informally or with no formal education.\",\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"5\",\r\n            \"modified_by\": null,\r\n            \"created_on\": \"2019-08-25 11:58:59\",\r\n            \"modified_on\": \"2019-08-25 11:58:59\"\r\n        }"
+										},
+										"url": {
+											"raw": "{{cbhcm_api_url}}/education",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"education"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "education",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/education",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"education"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "education",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/education",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"education"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Certifications",
+							"item": [
+								{
+									"name": "certification",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/certification",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"certification"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "certification",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/certification",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"certification"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "certification",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/certification",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"certification"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "certification",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/certification",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"certification"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "language",
+							"item": [
+								{
+									"name": "language",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/language",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"language"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "language",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/language",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"language"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "language",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/language",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"language"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "language",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{cbhcm_api_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{cbhcm_api_url}}/language",
+											"host": [
+												"{{cbhcm_api_url}}"
+											],
+											"path": [
+												"language"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Dependent",
+					"item": [
+						{
+							"name": "dependents",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/dependents",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"dependents"
+									]
+								},
+								"description": "test"
+							},
+							"response": []
+						},
+						{
+							"name": "dependents",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n           \r\n            \"employee\": \"8\",\r\n            \"name\": \"texas\",\r\n            \"gender\": \"Male\",\r\n            \"relationship\": \"Other\",\r\n            \"dob\": \"2019-08-01\",\r\n            \"id_type\": \"9\",\r\n            \"id_number\": \"12444\",\r\n            \"status\": null,\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"created_on\": \"2019-08-12 16:08:31\",\r\n            \"modified_by\": null,\r\n            \"modified_on\": \"2019-08-12 16:08:31\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/dependents",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"dependents"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "dependents",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n           \r\n            \"employee\": \"8\",\r\n            \"name\": \"texas\",\r\n            \"gender\": \"Male\",\r\n            \"relationship\": \"Other\",\r\n            \"dob\": \"2019-08-01\",\r\n            \"id_type\": \"9\",\r\n            \"id_number\": \"12444\",\r\n            \"status\": null,\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"created_on\": \"2019-08-12 16:08:31\",\r\n            \"modified_by\": null,\r\n            \"modified_on\": \"2019-08-12 16:08:31\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/dependents",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"dependents"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "dependents",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n           \r\n            \"employee\": \"8\",\r\n            \"name\": \"texas\",\r\n            \"gender\": \"Male\",\r\n            \"relationship\": \"Other\",\r\n            \"dob\": \"2019-08-01\",\r\n            \"id_type\": \"9\",\r\n            \"id_number\": \"12444\",\r\n            \"status\": null,\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"created_on\": \"2019-08-12 16:08:31\",\r\n            \"modified_by\": null,\r\n            \"modified_on\": \"2019-08-12 16:08:31\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/dependents",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"dependents"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Emergency Contact",
+					"item": [
+						{
+							"name": "emergencycontacts/me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \r\n            \"employee\": \"8\",\r\n            \"name\": \"kumar pandey\",\r\n            \"relationship\": \"son\",\r\n            \"home_phone\": \"8873388378\",\r\n            \"work_phone\": \"9919848397\",\r\n            \"mobile_phone\": \"99187635\",\r\n            \"email\": \"vivek65k@gmail.com\",\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"created_on\": \"2018-11-24 05:57:57\",\r\n            \"modified_by\": \"1\",\r\n            \"modified_on\": \"2019-08-14 11:17:38\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/emergencycontacts",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"emergencycontacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "emergencycontacts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \r\n            \"employee\": \"8\",\r\n            \"name\": \"kumar pandey\",\r\n            \"relationship\": \"son\",\r\n            \"home_phone\": \"8873388378\",\r\n            \"work_phone\": \"9919848397\",\r\n            \"mobile_phone\": \"99187635\",\r\n            \"email\": \"vivek65k@gmail.com\",\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"created_on\": \"2018-11-24 05:57:57\",\r\n            \"modified_by\": \"1\",\r\n            \"modified_on\": \"2019-08-14 11:17:38\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/emergencycontacts",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"emergencycontacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "emergencycontacts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \"id\": \"1\",\r\n            \"employee\": \"8\",\r\n            \"name\": \"kumar ds\",\r\n            \"relationship\": \"son\",\r\n            \"home_phone\": \"8873388378\",\r\n            \"work_phone\": \"9919848397\",\r\n            \"mobile_phone\": \"99187635\",\r\n            \"email\": \"vivek65k@gmail.com\",\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"created_on\": \"2018-11-24 05:57:57\",\r\n            \"modified_by\": \"1\",\r\n            \"modified_on\": \"2019-08-14 11:17:38\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/emergencycontacts",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"emergencycontacts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateproject",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/project",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"project"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Work Management",
+			"item": [
+				{
+					"name": "Update Project",
+					"item": [
+						{
+							"name": "updateproject",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/Project",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"Project"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateproject",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \"id\": \"1\",\r\n            \"pid\": \"PID180004\",\r\n            \"name\": \"vivek kumar pandey .\",\r\n            \"client\": \"15\",\r\n            \"bc_id\": null,\r\n            \"pl_st_dt\": \"2018-12-19\",\r\n            \"pl_end_dt\": \"2019-05-01\",\r\n            \"ac_st_dt\": \"2019-01-01\",\r\n            \"ac_end_dt\": \"2019-07-01\",\r\n            \"parent_pid\": null,\r\n            \"est_per_week\": \"12\",\r\n            \"currency\": \"67\",\r\n            \"budget\": \"10000.00\",\r\n            \"note\": \"\",\r\n            \"details\": \"Onboard 100 Insurance clients by next 3 months by conducting camps, cold-calling, pursuing contacts. promoting through campaigns etc.\",\r\n            \"workplace\": null,\r\n            \"reviewed_by\": null,\r\n            \"reviewed_on\": null,\r\n            \"r_status\": \"Approved\",\r\n            \"r_comment\": null,\r\n            \"exec_status\": \"2\",\r\n            \"schedule_status\": null,\r\n            \"budget_status\": null,\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": null,\r\n            \"created_on\": \"2018-11-12 12:31:52\",\r\n            \"modified_by\": \"1\",\r\n            \"modified_on\": \"2019-07-23 12:32:53\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/project",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"project"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateproject",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/project",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"project"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Update Project Task",
+					"item": [
+						{
+							"name": "projtask/me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/ProjTask/me",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"ProjTask",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "projtask",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/projtask",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"projtask"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "projtask",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/projtask",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"projtask"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Attendance",
+					"item": [
+						{
+							"name": "attendance",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/attendance",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"attendance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "attendance",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/attendance",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"attendance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "attendance",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}attendance",
+									"host": [
+										"{{cbhcm_api_url}}attendance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "attendance",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/attendance",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"attendance"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Employee Overtime",
+					"item": [
+						{
+							"name": "employeeovertime",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeovertime",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeovertime"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeovertime",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeovertime",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeovertime"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeovertime",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeovertime",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeovertime"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeovertime",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeovertime",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeovertime"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Document",
+			"item": [
+				{
+					"name": "company document",
+					"item": [
+						{
+							"name": "document/me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/document",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"document"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "document",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://dev.techtexas.net/cbpro/CBE12345/api/document",
+									"protocol": "https",
+									"host": [
+										"dev",
+										"techtexas",
+										"net"
+									],
+									"path": [
+										"cbpro",
+										"CBE12345",
+										"api",
+										"document"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "document",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/document",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"document"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "document",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/document/2",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"document",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "personal document",
+					"item": [
+						{
+							"name": "employeedocument",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeedocument",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeedocument"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeedocument",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeedocument",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeedocument"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeedocument",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeedocument",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeedocument"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeedocument",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeedocument",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeedocument"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "travel",
+			"item": [
+				{
+					"name": "travel request",
+					"item": [
+						{
+							"name": "employeetravelrecord",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecord",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecord"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecord",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecord",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecord"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecord",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecord",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecord"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecord",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecord",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecord"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "travel request approval",
+					"item": [
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "HealthFV",
+					"item": [
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeetravelrecordapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeetravelrecordapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeetravelrecordapproval"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "HealthAV",
+					"item": [
+						{
+							"name": "healthav",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/cbpro/CBE12345/api/healthav",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"cbpro",
+										"CBE12345",
+										"api",
+										"healthav"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "healthav",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/healthav",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"healthav"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "healthav",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/healthav",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"healthav"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "healthav",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/healthav",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"healthav"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "finance",
+			"item": [
+				{
+					"name": "expenses",
+					"item": [
+						{
+							"name": "employeeexpense",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpense",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpense"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeexpense",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpense",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpense"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeexpense",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpense",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpense"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeexpense",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpense",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpense"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "expense approval",
+					"item": [
+						{
+							"name": "employeeexpenseapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpenseapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpenseapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeexpenseapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpenseapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpenseapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeexpenseapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpenseapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpenseapproval"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "employeeexpenseapproval",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeexpenseapproval",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeexpenseapproval"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Company Pulse",
+			"item": [
+				{
+					"name": "post an idea",
+					"item": [
+						{
+							"name": "idea",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/idea",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"idea"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "idea",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/idea",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"idea"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "idea",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/idea",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"idea"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "idea",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/idea",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"idea"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "post a blog",
+					"item": [
+						{
+							"name": "blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/blog",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"blog"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/blog",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"blog"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/blog",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"blog"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "blog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/blog",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"blog"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "rate an idea",
+					"item": [
+						{
+							"name": "icomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/icomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"icomment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "icomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/icomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"icomment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "icomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/icomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"icomment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "icomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/icomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"icomment"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "rate a blog",
+					"item": [
+						{
+							"name": "bcomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/bcomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"bcomment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "bcomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/bcomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"bcomment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "bcomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/bcomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"bcomment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "bcomment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/bcomment",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"bcomment"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "weekly polls",
+					"item": [
+						{
+							"name": "wp",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/wp",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"wp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "wp",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/wp",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"wp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "wp",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/wp",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"wp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "wp",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/wp",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"wp"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "take a Survey",
+					"item": [
+						{
+							"name": "survey",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/survey",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"survey"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "learn & lead",
+			"item": [
+				{
+					"name": "All Training Session",
+					"item": [
+						{
+							"name": "trainingsession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/trainingsession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"trainingsession"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "trainingsession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/trainingsession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"trainingsession"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "trainingsession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/trainingsession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"trainingsession"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "trainingsession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/trainingsession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"trainingsession"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "My traning session",
+					"item": [
+						{
+							"name": "EmployeeTrainingSession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/EmployeeTrainingSession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"EmployeeTrainingSession"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmployeeTrainingSession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/EmployeeTrainingSession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"EmployeeTrainingSession"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmployeeTrainingSession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/EmployeeTrainingSession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"EmployeeTrainingSession"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmployeeTrainingSession",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/EmployeeTrainingSession",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"EmployeeTrainingSession"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Intrective traning",
+					"item": [
+						{
+							"name": "learningresource",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/learningresource",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"learningresource"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a04aab64-8eeb-4285-af39-3e80f4f8ac9c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "a35a9803-1dfb-4e45-804e-41b20bfea416",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "common traning",
+					"item": [
+						{
+							"name": "comtr",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/comtr",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"comtr"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "infographics",
+					"item": [
+						{
+							"name": "Infogrf",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/Infogrf",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"Infogrf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Infogrf",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/Infogrf",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"Infogrf"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "traning video",
+					"item": [
+						{
+							"name": "vcourse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dev.techtexas.net/cbpro/CBE12345/api/vcourse",
+									"protocol": "https",
+									"host": [
+										"dev",
+										"techtexas",
+										"net"
+									],
+									"path": [
+										"cbpro",
+										"CBE12345",
+										"api",
+										"vcourse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "vcourse",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/vcourse",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"vcourse"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "traning audio",
+					"item": [
+						{
+							"name": "adcourse",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/adcourse",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"adcourse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "adcourse",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/adcourse",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"adcourse"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "learning quiz",
+					"item": [
+						{
+							"name": "lpuiz",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/lpuiz",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"lpuiz"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "leave",
+			"item": [
+				{
+					"name": "approved leave",
+					"item": [
+						{
+							"name": "leaveapprove",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeleave",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeleave"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "leaveapprove",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \"id\": \"652\",\r\n            \"lang_id\": \"1\",\r\n            \"list_id\": \"45\",\r\n            \"type\": \"E\",\r\n            \"list_type\": \"Education\",\r\n            \"sortorder\": null,\r\n            \"name\": \"Bachelors Degree (General)\",\r\n            \"notes\": \"Bachelor Level General Degree like B.Sc, BA, B.Com, BBA\",\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"modified_by\": null,\r\n            \"created_on\": \"2019-07-11 13:07:41\",\r\n            \"modified_on\": \"0000-00-00 00:00:00\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/employeeleave",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"employeeleave"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "leaveapprove",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n            \"id\": \"652\",\r\n            \"lang_id\": \"1\",\r\n            \"list_id\": \"45\",\r\n            \"type\": \"E\",\r\n            \"list_type\": \"tik\",\r\n            \"sortorder\": null,\r\n            \"name\": \"Bachelors Degree (General)\",\r\n            \"notes\": \"Bachelor Level General Degree like B.Sc, BA, B.Com, BBA\",\r\n            \"status\": \"Active\",\r\n            \"entity\": \"1\",\r\n            \"created_by\": \"1\",\r\n            \"modified_by\": null,\r\n            \"created_on\": \"2019-07-11 13:07:41\",\r\n            \"modified_on\": \"0000-00-00 00:00:00\"\r\n        }"
+								},
+								"url": {
+									"raw": "{{cbhcm_api_url}}/EmployeeLeave",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"EmployeeLeave"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "leaveapprove",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{cbhcm_api_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{cbhcm_api_url}}/EmployeeLeave",
+									"host": [
+										"{{cbhcm_api_url}}"
+									],
+									"path": [
+										"EmployeeLeave"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "employees",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{cbhcm_api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cbhcm_api_url}}/employees?page=1&limit=51",
+					"host": [
+						"{{cbhcm_api_url}}"
+					],
+					"path": [
+						"employees"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "51"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{cbhcm_api_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "677648ce-fb73-4233-8795-cc3c74aaae29",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e46507d1-6500-4110-bcd4-27bbd80176c2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "95407f59-30fa-4814-86f2-343452e5dd0e",
+			"key": "cbhcm_api_url",
+			"value": "https://dev.techtexas.net/cbpro/CBE12345/api",
+			"type": "string"
+		},
+		{
+			"id": "14d0da31-48bd-4546-a660-d58fdc5a2ac8",
+			"key": "cbhcm_api_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
